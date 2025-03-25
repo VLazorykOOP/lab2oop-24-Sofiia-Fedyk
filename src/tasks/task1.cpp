@@ -1,4 +1,9 @@
 #include <cstdio>
+#include <iostream>
+
+// #include "../task.h"
+
+using namespace std;
 
 int calculate_expression(int a, int b, int c, int d) {
     // Множення на 15 як (16-1)*a = (a << 4) - a
@@ -23,21 +28,21 @@ int calculate_expression(int a, int b, int c, int d) {
     return div_ab - term_c + term_d;
 }
 
-int main() {
+void task_01() {
     int a, b, c, d;
     
     // Введення змінних за допомогою scanf
-    if (scanf("%d %d %d %d", &a, &b, &c, &d) != 4) {
-        // Обробка помилки введення
-        printf("Помилка введення даних\n");
-        return 1;
-    }
+    // if (scanf("%d %d %d %d", &a, &b, &c, &d) != 4) {
+        
+    cin >> a >> b >> c >> d;
+    // Обробка помилки введення
+        // printf("Помилка введення даних\n");
+        // return 1;
+    // }
     
     // Обчислення результату
     int result = calculate_expression(a, b, c, d);
     
     // Виведення результату
     printf("%d\n", result);
-
-    return 0;
 }
